@@ -2,7 +2,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build"
+    "build": "next build",
+    "gcloud:build": "gcloud builds submit --tag gcr.io/boriguri-blog/boriguri-blog --project boriguri-blog",
+    "gcloud:deploy": "gcloud run deploy --image gcr.io/boriguri-blog/boriguri-blog --project boriguri-blog --platform managed"
   },
   "dependencies": {
     "next": "latest",
